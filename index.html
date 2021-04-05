@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+       
+      .form-wrapper {
+       
+          width: 70%;
+          background-color: #ffdd99;
+          padding: 25px;
+          border-radius: 10px;
+
+      }
+      input[type='radio'] :after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #ffffff;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='radio']:checked:after {
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #b3ff00;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+    input[type='checkbox']:after{
+        width: 15px;
+        height: 15px;
+        border-radius: 0px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #ffffff;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+    input[type='checkbox']:checked:after{
+        width: 15px;
+        height: 15px;
+        border-radius: 0px;
+        top: -2px;
+        left: -1px;
+        position: relative;
+        background-color: #b3ff00;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+   
+    <h1 id="title" style="color:#0f8d2b">
+        Advertising Survey !
+    </h1>
+    <p id="description">this is a survey you can tell your experince in company#
+    </p>
+    <div class="form-wrapper">
+    <div class="form-group">
+    <form id="survey-form">
+        <label id="name-label">Name:</label>
+        <input type="text" class="form-control" id="name" required placeholder="first name"></input> <br>
+        <label id="email-label">Email:</label>
+        <input type="email"  class="form-control" id="email" required placeholder="cool mail"></input><br>
+        <label id="number-label">Phone-Number:</label>
+        <input type="number" class="form-control"  min="1" max="10" id="number" required placeholder="wynky number"></input><br>
+        
+
+        <label for="cars">Select Ratings:</label>
+<select id="dropdown" class="form-control" name="ratings">
+               <option value="0-6">bad</option>
+              <option value="7-8">good</option>
+            <option value="9-10">great</option>
+             <option value="others">others</option>
+</select> </br>
+<div id="radio-button-area">
+<input type="radio"  id="male"  class="radio-inline "name="gender" value="male">
+<label for="male">Male</label><br>
+<input type="radio" id="female" class="radio-inline "name="gender" value="female">
+<label for="female">Female</label><br>
+<input type="radio" id="other" class="radio-inline "name="gender" value="other">
+<label for="other">Other</label> </br>
+</div>
+
+
+<input type="checkbox" id="working"  name="employed" value="employed">
+<label for="working"> I am working</label><br>
+<input type="checkbox" id="businnesman"  name="businnesman" value="businnesman">
+<label for="businnesman"> I am a businnesman</label><br>
+<input type="checkbox" id="others" name="others" value="others"> 
+<label for="vehicle3"> others</label><br>
+<textarea class="form-control" placeholder="Additional Comments"></textarea>
+<input type="submit" class="form-control" id="submit">
+    </form>
+</div>
+</div>
+</div>
+    
+</body>
+</html>
